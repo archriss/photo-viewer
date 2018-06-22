@@ -14,6 +14,7 @@ export interface Photo {
     title?: string;
     summary?: string;
     titleColor?: string | number;
+    titleFontSize?: number;
     summaryColor?: string | number;
 }
 export interface MerryPhotoViewPorps {
