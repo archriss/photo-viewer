@@ -150,6 +150,7 @@ public class MerryPhotoView extends View {
 
                 int summaryColor = Color.WHITE;
                 int titleColor = Color.WHITE;
+                int titleFontSize = 12;
                 if (getShareText() != null) {
                     overlayView.setShareText(getShareText());
                 }
@@ -164,10 +165,13 @@ public class MerryPhotoView extends View {
 //
                 overlayView.setPagerText((position + 1) + " / " + getData().length);
                 if (merryPhotoData.titleColor != 0) {
-
                     titleColor = merryPhotoData.titleColor;
                 }
+                if (merryPhotoData.titleFontSize != 0) {
+                    titleFontSize = merryPhotoData.titleFontSize;
+                }
                 overlayView.setTitleTextColor(titleColor);
+                overlayView.setTitleFontSize(titleFontSize);
                 if (merryPhotoData.summaryColor != 0) {
                     summaryColor = merryPhotoData.summaryColor;
                 }
@@ -178,6 +182,7 @@ public class MerryPhotoView extends View {
                 writableMap.putString("summary", merryPhotoData.summary);
                 writableMap.putInt("summaryColor", merryPhotoData.summaryColor);
                 writableMap.putInt("titleColor", merryPhotoData.titleColor);
+                writableMap.putInt("titleFontSize", merryPhotoData.titleFontSize);
                 writableMap.putMap("source", Utils.toWritableMap(merryPhotoData.source));
 
                 // onChange event from js side

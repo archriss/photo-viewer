@@ -88,6 +88,9 @@ public class MerryPhotoViewManager extends SimpleViewManager<MerryPhotoView> {
                 if (rm.hasKey("titleColor")) {
                     merryPhotoData.titleColor = rm.getInt("titleColor");
                 }
+                if (rm.hasKey("titleFontSize")) {
+                    merryPhotoData.titleFontSize = rm.getInt("titleFontSize");
+                }
                 list.add(merryPhotoData);
 
             } catch (Exception e) {

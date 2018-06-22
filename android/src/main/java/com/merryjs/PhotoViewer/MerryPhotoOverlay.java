@@ -84,6 +84,10 @@ public class MerryPhotoOverlay extends RelativeLayout {
         tvTitle.setTextColor(color);
     }
 
+    public void setTitleFontSize(int fontSize) {
+        tvTitle.setTextSize(fontSize);
+    }
+
     public void setTitleText(String text) {
         tvTitle.setText(text);
     }
